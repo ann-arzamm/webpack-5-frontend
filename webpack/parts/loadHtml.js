@@ -13,6 +13,9 @@ export default () => ({
     new HtmlWebpackPlugin({
       template: path.join(process.cwd(), 'src/index.html'),
       inject: 'body',
+      // for multi page static site
+      chunks: ['index'],
+      filename: 'index.html',
     }),
   ],
 });
